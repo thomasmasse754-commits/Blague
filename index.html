@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise</title>
+  <style>
+    body{
+      margin:0;
+      background:#111;
+      color:white;
+      font-family:Arial,sans-serif;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      text-align:center;
+    }
+    .hidden{display:none;}
+  </style>
+</head>
+<body>
+
+<div id="loading">
+  <h1>Chargement...</h1>
+</div>
+
+<div id="message" class="hidden">
+  <h1>Salut 👋</h1>
+  <p>Merci d'avoir cliqué.</p>
+  <p>😱 Vous nous avez fourni l'accès total à votre compte.</p>
+  <p>...</p>
+  <h2>😂 Non, je rigole ! Tu t'es fait avoir.</h2>
+</div>
+
+<script>
+setTimeout(() => {
+  document.getElementById("loading").classList.add("hidden");
+  document.getElementById("message").classList.remove("hidden");
+}, 3000);
+</script>
+
+</body>
+</html>
